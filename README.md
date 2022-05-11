@@ -20,5 +20,17 @@
   pytest -vvs --capture=tee-sys
   ```
 
+## Run with Docker
 
+1. Build image
+
+  ```sh
+  docker build . -t swapi-test:latest
+  ```
+
+2. Run image
+
+  ```sh
+  docker run swapi-test:latest
+  ```
 
