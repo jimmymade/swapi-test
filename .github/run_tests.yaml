@@ -1,0 +1,19 @@
+name: Tests
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    name: Execute Tests
+    runs-on: python:3.8.5-slim-buster
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Run Tests
+        run: |-
+          pip install -r requirements.txt
+          pytest -vvs --capture=tee-sys
