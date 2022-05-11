@@ -3,6 +3,8 @@ import requests
 from config import BASE_API_URL
 from constants import SWAPI_RESOURCE
 
+"""This module contains utility functions that wrap calls to the Star Wars API"""
+
 
 def get_resource_count(resource: SWAPI_RESOURCE) -> int:
     """Get count field from specific swapi resource"""

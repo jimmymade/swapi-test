@@ -1,9 +1,9 @@
 # Test Suite for Star Wars API 
 
-(https://swapi.dev/)
-
+Test suite to test the Star Wars public API (https://swapi.dev/).
 
 ## Install locally with virtual env
+Steps to setup your virtual environment and run tests
 
 1. Setup virtual env:
 
@@ -21,6 +21,7 @@
   ```
 
 ## Run with Docker
+Steps to build and run docker image with tests. You will need to have docker installed and running
 
 1. Build image
 
