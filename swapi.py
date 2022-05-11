@@ -4,6 +4,8 @@ from config import BASE_API_URL
 from constants import SWAPI_RESOURCE
 
 """This module contains utility functions that wrap calls to the Star Wars API"""
+"""SWAPI provides a library https://github.com/phalt/swapi-python that can be used instead of this"""
+"""This was created for testing purposes"""
 
 
 def get_resource_count(resource: SWAPI_RESOURCE) -> int:
