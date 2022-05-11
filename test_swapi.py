@@ -5,6 +5,7 @@ from config import BASE_API_URL
 from constants import SWAPI_RESOURCE
 from swapi import get_full_resource_results, get_resource_count
 
+"""Contains tests that validate the Star Wars API"""
 
 def test_can_connect_to_api():
     """Validate we are able to connect to api"""
