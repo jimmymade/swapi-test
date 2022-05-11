@@ -25,3 +25,9 @@ def get_full_resource_results(resource: SWAPI_RESOURCE) -> List:
         full_results.extend(response_json.get("results"))
         next_url = response_json.get("next")
     return full_results
+
+
+def search_resource(resource: SWAPI_RESOURCE, search_term: str):
+    """Get json response from using the resource search endpoint"""
+    url = f"{BASE_API_URL}/{resource}/?search={search_term}"
+    return requests.get(url).json()
