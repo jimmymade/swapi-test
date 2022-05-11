@@ -1,5 +1,6 @@
 from typing import List
 import requests
+from requests import Response
 from config import BASE_API_URL
 from constants import SWAPI_RESOURCE
 
@@ -33,3 +34,9 @@ def search_resource(resource: SWAPI_RESOURCE, search_term: str):
     """Get json response from using the resource search endpoint"""
     url = f"{BASE_API_URL}/{resource}/?search={search_term}"
     return requests.get(url).json()
+
+
+def get_schema(resource: SWAPI_RESOURCE) -> Response:
+    """Get JSON schema for a resource"""
+    url = f"{BASE_API_URL}/{resource}/schema"
+    return requests.get(url)

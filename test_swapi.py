@@ -3,7 +3,12 @@ import requests
 from requests import Response
 from config import BASE_API_URL
 from constants import SWAPI_RESOURCE
-from swapi import get_full_resource_results, get_resource_count, search_resource
+from swapi import (
+    get_full_resource_results,
+    get_resource_count,
+    get_schema,
+    search_resource,
+)
 
 """Contains tests that validate the Star Wars API"""
 
@@ -34,3 +39,12 @@ def test_people_search():
     results = json_response.get("results")
     for result in results:
         assert search_term in result.get("name").lower()
+
+
+# This test fails at time of writing.
+# Response returns 404
+# Commenting out for now.
+# def test_schema():
+#     """Validates the schema endpoint"""
+#     response = get_schema(SWAPI_RESOURCE.PEOPLE.value)
+#     assert response.status_code == 200
